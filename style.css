@@ -230,3 +230,49 @@ footer {
     }
     
 }
+/*michee_nshimba*/
+.form{
+    margin-top: 80px;
+}
+.left{
+    display: inline-block;
+    text-align: left;
+    margin-left: 60px;
+    
+} 
+p.addr{
+    margin-top: 50px;
+}
+p.suivez{
+    margin-top: 80px
+}
+p.poli{
+    margin-top: 70px;
+}
+.right{
+
+    float: right;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+
+input.inp{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #88878700;
+    border: 1px solid #413d05;
+    padding: 20px;
+    color: #fff;
+}
+input.message{
+    height: 100px;
+}
+input.bout{
+    margin-top: 15px;
+    padding: 9px;
+    background: linear-gradient(to right, rgba(0, 0, 7, 0), #413d05);
+    border: none;
+    color: white;
+}
