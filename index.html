@@ -11,14 +11,38 @@
         <div style="width: 150px;">
             <a href="#Acceuil"><img height="40px" src="images/logo.png" alt=""></a>
         </div>
-        <ul>
+        
+        <ul class="navbar">
             <li><a href="#Acceuil">Acceuil</a></li>
             <li><a href="#Actualités">Actualités</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="apropos.html">A propos</a></li>
         </ul>
-        <p><a class="contact" href="#Contactez-nous">Contactez-nous</a></p>
+        <!--<div class="modal" id="modal1" onclick="closeModal(event)"></div>-->
+        <div class="button"></div>
+        <p class="cont"><a class="contact" href="#Contactez-nous">Contactez-nous</a></p>
     </header>
+    <script>
+        var button = document.querySelector('.button');
+        var nav = document.querySelector('.navbar');
+        var cont = document.querySelector('.conte');
+      
+        button.onclick = function() {
+            button.classList.toggle('active');
+            nav.classList.toggle('active');
+            cont.classList.toggle('active');
+        }
+
+        function closeModal(event) {
+            if (event) {
+                event.stopPropagation(); // Empêche la propagation de l'événement si c'est un clic sur la modal-content
+            }
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.style.display = "none"; // Cache toutes les modals
+            });
+        }
+    </script>      
     <section class="main">
         <div class="title">
             <h1>Nos services</h1>
@@ -109,20 +133,6 @@
         </div>
     </section>
     <div class="couleur"></div>
-    <div class="reseaux-footer">
-        <div class="item">
-            <a href="#"><img src="images/reseaux/ico-facebook.jpg" alt=""></a>
-        </div>
-        <div class="item">
-            <a href="#"><img src="images/reseaux/ico-whatsapp.jpg" alt=""></a>
-        </div>
-        <div class="item">
-            <a href="#"><img src="images/reseaux/ico-tiktok.jpg" alt=""></a>
-        </div>
-        <div class="item">
-            <a href="#"><img src="images/reseaux/ico-linkedin.jpg" alt=""></a>
-        </div>
-    </div>
     <footer >
         <div class="foot">
             <div class="item-footer place">
@@ -146,6 +156,20 @@
             <div class="item-footer contact-footer">
                 <h2>Contactez-nous</h2>
                 <a href="#">Exemple@gmail.com</a>
+            </div>
+            <div class="item-footer reseau-footer">
+                <h2>Suivez nous</h2>
+
+                <div class="reseau">
+                    <a href="#"><img src="images/reseaux/ico-facebook.jpg" alt=""></a>
+
+                    <a href="#"><img src="images/reseaux/ico-whatsapp.jpg" alt=""></a>
+
+                    <a href="#"><img src="images/reseaux/ico-tiktok.jpg" alt=""></a>
+
+                    <a href="#"><img src="images/reseaux/ico-linkedin.jpg" alt=""></a>
+                </div>
+
             </div>
         </div>
        
